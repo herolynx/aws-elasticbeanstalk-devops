@@ -22,6 +22,14 @@ Scope:
 
 ## Usage
 
+### Application
+
+1) Create application
+
+```
+eb init
+```
+
 ### Environment
 
 1) [Create environment](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-create.html)
@@ -56,7 +64,7 @@ eb config --cfg <cfg_name>
  
 2) Push changes to git
 
-3) Deploy changed to Elastic Beanstalk
+3) Deploy changes to Elastic Beanstalk
 
 ```
 eb deploy
