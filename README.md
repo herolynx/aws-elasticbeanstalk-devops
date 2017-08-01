@@ -1,48 +1,41 @@
-# seed-user-management-backend
+# aws-elasticbeanstalk-devops
 
-Seed of micro-service for user management
-
-## Build
-
-1) Build project
-
-```
-mvn clean build
-```
-
-or
-
-```
-mvn clean istall
-```
-
-2) Build and push docker image
-
-```
-mvn clean package docker:build -DpushImage -DpushImageTags -DdockerImageTags=<VERSION>
-```
-
-## Local development
-
+Seed of DevOps for `AWS Elastic Beanstalk`.
 Pre-requisites:
 
-    * [minikube](https://github.com/kubernetes/minikube)
-    * Maven
-    * Java 8
+* [The Elastic Beanstalk Command Line Interface (EB CLI)](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3.html)
 
-1) Run locally
+* [Deploying Elastic Beanstalk Applications from Docker Containers](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker.html)
+
+## Usage
+
+### Environment
+
+1) [Create environment](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-create.html)
 
 ```
-./run.sh
+eb create <env_name>
 ```
 
-## DevOps
+##### Configuration
 
-DevOps for following clouds/orchestration solution is prepared:
+1) Save locally
 
-* Kubernetes (`devops/kubernetes`)
+```
+eb config save <env_name:optional> --cfg <file_name>
+```
 
-* AWS - Elastic Beanstalk (`devops/aws`)
+2) Upload to S3
+
+```
+eb config put <file_name>
+```
+
+3) Load config on env
+
+```
+eb config --cfg <cfg_name>
+```
 
 ## Peformance tests
 
