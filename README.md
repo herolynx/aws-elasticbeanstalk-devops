@@ -72,6 +72,6 @@ eb deploy
 
 ## Peformance tests
 
-Single performance tests can be done using `vegeta` tool.
+Simple performance tests can be done using `vegeta` tool.
 
 Check `perf` directory for more details.
